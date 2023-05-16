@@ -6,7 +6,7 @@ volumes:
 
 services:
   node-red:
-    image: nodered/node-red
+    build: node-red
     networks:
       - node_red
     ports:
