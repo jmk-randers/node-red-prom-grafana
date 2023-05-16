@@ -11,6 +11,8 @@ services:
       - node_red
     ports:
       - "1880:1880"
+    depends_on:
+      - grafana
     environment:
       #GIT_BRANCH: ${GIT_BRANCH}
       
@@ -21,7 +23,7 @@ services:
       # Gør det muligt at deploye flowkode direkte fra IDE og bruge git til at comitte ændringerne til repo.
     volumes:
       - ./node-red/:/data
-      
+
   prometheus:
     image: prom/prometheus
     restart: always
