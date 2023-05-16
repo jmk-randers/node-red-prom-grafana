@@ -31,4 +31,4 @@ scrape_configs:
   - job_name: node-red
     scrape_interval: 5s
     static_configs:
-      - targets: ['localhost:1880/metrics']
+      - targets: ['node-red:1880/metrics']
