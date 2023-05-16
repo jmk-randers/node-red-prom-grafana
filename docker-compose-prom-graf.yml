@@ -4,8 +4,6 @@ volumes:
  prometheus_data: {}
  grafana_data: {}
 
-
-
 services:
   node-red:
     image: nodered/node-red
@@ -22,7 +20,8 @@ services:
       # Bind mount fra codespace til den kørende containers /data.
       # Gør det muligt at deploye flowkode direkte fra IDE og bruge git til at comitte ændringerne til repo.
     volumes:
-      - "./node-red/:/data"
+      - ./node-red/:/data
+      
   prometheus:
     image: prom/prometheus
     restart: always
