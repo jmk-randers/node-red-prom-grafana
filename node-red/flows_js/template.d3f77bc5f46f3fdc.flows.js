@@ -2,6 +2,7 @@ const Node = {
   "id": "d3f77bc5f46f3fdc",
   "type": "template",
   "z": "971a7ae6df987a48",
+  "g": "6e22e41290516ce8",
   "name": "Create metrics for Prometheus",
   "field": "payload",
   "fieldType": "msg",
@@ -9,8 +10,8 @@ const Node = {
   "syntax": "mustache",
   "template": "",
   "output": "str",
-  "x": 490,
-  "y": 280,
+  "x": 510,
+  "y": 540,
   "wires": [
     [
       "a9b79147013b6024",

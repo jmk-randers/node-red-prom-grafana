@@ -1,5 +1,5 @@
 const Node = {
-  "id": "1711aa8ca62d7432",
+  "id": "90aab5350b685232",
   "type": "change",
   "z": "971a7ae6df987a48",
   "name": "Generated test data",
@@ -29,7 +29,7 @@ const Node = {
       "t": "set",
       "p": "metrics.values.datasource",
       "pt": "flow",
-      "to": "sftp.testserver01.dk",
+      "to": "sftp.testserver02.dk",
       "tot": "str"
     },
     {
@@ -43,22 +43,15 @@ const Node = {
       "t": "set",
       "p": "metrics.values.value",
       "pt": "flow",
-      "to": "$random()>0.5?1:0",
+      "to": "$random()>0.8?1:0",
       "tot": "jsonata"
     },
     {
       "t": "set",
       "p": "metrics.values.message",
       "pt": "flow",
-      "to": "$number($flowContext(\"metrics.values.value\"))>0.5?\"Last file transfer succesfull\":\"Last file transfer failed\"",
+      "to": "$number($flowContext(\"metrics.values.value\"))>0.8?\"Last file transfer succesfull\":\"Last file transfer failed\"",
       "tot": "jsonata"
-    },
-    {
-      "t": "set",
-      "p": "payload",
-      "pt": "msg",
-      "to": "",
-      "tot": "str"
     }
   ],
   "action": "",
@@ -67,13 +60,13 @@ const Node = {
   "to": "",
   "reg": false,
   "x": 400,
-  "y": 180,
+  "y": 240,
   "wires": [
     [
       "cea9e09582b17cad"
     ]
   ],
-  "_order": 6
+  "_order": 12
 }
 
 module.exports = Node;
