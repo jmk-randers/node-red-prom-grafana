@@ -43,14 +43,14 @@ const Node = {
       "t": "set",
       "p": "metrics.values.value",
       "pt": "flow",
-      "to": "$random()>0.5?1:0",
+      "to": "$random()>0.3?1:0",
       "tot": "jsonata"
     },
     {
       "t": "set",
       "p": "metrics.values.message",
       "pt": "flow",
-      "to": "$number($flowContext(\"metrics.values.value\"))>0.5?\"Last file transfer succesfull\":\"Last file transfer failed\"",
+      "to": "$number($flowContext(\"metrics.values.value\"))>0.3?\"Last file transfer succesfull\":\"Last file transfer failed\"",
       "tot": "jsonata"
     },
     {
